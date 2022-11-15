@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
-import { JefeDepartamentoComponent } from './pages/jefe-departamento/jefe-departamento.component';
 
 const routes: Routes = [
   {
@@ -11,11 +10,11 @@ const routes: Routes = [
   },
   {
     path: 'alumno',
-    component: AlumnoComponent
+    component: AlumnoComponent,
   },
   {
     path: 'jefedepa',
-    component: JefeDepartamentoComponent
+    loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule)
   },
   {
     path: '**',

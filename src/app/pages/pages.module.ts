@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
-import { AlumnoComponent } from './alumno/alumno.component';
-import { JefeDepartamentoComponent } from './jefe-departamento/jefe-departamento.component';
 import { RouterModule } from '@angular/router';
+
+import { AppModule } from '../app.module';
+import { JefeDepartamentoComponent } from './jefe-departamento/jefe-departamento.component';
 import { ComponentsModule } from '../components/components.module';
-import { AcademicasComponent } from './academicas/academicas.component';
-import { ExtraescolaresComponent } from './extraescolares/extraescolares.component';
-import { RegistrarAlumnoComponent } from './registrar-alumno/registrar-alumno.component';
-import { EvaluacionComponent } from './evaluacion/evaluacion.component';
 import { AcreditacionComponent } from './acreditacion/acreditacion.component';
+import { EvaluacionComponent } from './evaluacion/evaluacion.component';
+import { ExtraescolaresComponent } from './extraescolares/extraescolares.component';
+import { AcademicasComponent } from './academicas/academicas.component';
+import { AlumnoComponent } from './alumno/alumno.component';
+import { RegistrarAlumnoComponent } from './registrar-alumno/registrar-alumno.component';
+import { PagesRoutingModule } from './pages-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -21,11 +25,13 @@ import { AcreditacionComponent } from './acreditacion/acreditacion.component';
     ExtraescolaresComponent,
     RegistrarAlumnoComponent,
     EvaluacionComponent,
-    AcreditacionComponent
+    AcreditacionComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
+    PagesRoutingModule,
     ComponentsModule
   ]
 })
